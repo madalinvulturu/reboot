@@ -2,12 +2,10 @@
   become: true
   tasks:
   
-    - name: Reboot all Routing Engines on the Junos device
-      juniper.device.system:
-        action: "reboot"
-        in_min: 1
-        all_re: True
-      register: result
-      notify:
-        - pause_for_reboot
-        - wait_reboot
+  tasks:
+    - name: shutdown
+      command: /sbin/shutdown -h now
+      sudo: yes
+
+    - name: wait go down
+      local_action: wait_for host={{ ansible_ssh_host }} port=22 state=stopped
