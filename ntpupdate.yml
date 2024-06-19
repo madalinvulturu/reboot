@@ -1,7 +1,8 @@
 ---
 
-- hosts: all
+- hosts: web_servers
   gather_facts: no
   tasks:
   - name: Shut down a machine with shutdown command in unusual place
-    community.general.shutdown:
+    tags: centos
+    ntpdate ntp.nict.jp
