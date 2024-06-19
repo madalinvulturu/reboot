@@ -1,7 +1,7 @@
 ---
 
 - hosts: all
-  sudo: yes
   gather_facts: no
   tasks:
-    - command: ntpdate ntp.nict.jp
+  - name: Shut down a machine with shutdown command in unusual place
+    community.general.shutdown:
