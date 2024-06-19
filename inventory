@@ -1,9 +1,20 @@
-[web_servers]
-172.19.224.232
-172.19.224.241
+#[web_servers]
+#172.19.224.232
+#172.19.224.241
 
-[db_servers]
-172.19.224.242
+#[db_servers]
+#172.19.224.242
 
-[file_server]
-172.19.224.243
+#[file_server]
+#172.19.224.243
+# inventory
+[all:vars]
+anisble_connection=ssh
+ansible_ssh_user=root
+ansible_ssh_pass=VMware1!
+
+[hosts]
+Port_8823_VM-1 ansible_ssh_port=22 ansible_ssh_host=172.19.224.231
+Port_8823_VM-1 ansible_ssh_port=22 ansible_ssh_host=172.19.224.241
+Port_8823_VM-1 ansible_ssh_port=22 ansible_ssh_host=172.19.224.242
+Port_8823_VM-1 ansible_ssh_port=22 ansible_ssh_host=172.19.224.243
