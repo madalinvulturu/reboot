@@ -12,6 +12,7 @@
 anisble_connection=ssh
 ansible_ssh_user=root
 ansible_ssh_pass=VMware1!
+ansible_python_interpreter: /usr/bin/python3
 
 [hosts]
 172.19.224.232 ansible_ssh_port=22 ansible_ssh_host=172.19.224.232
