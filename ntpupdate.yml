@@ -3,6 +3,6 @@
 - hosts: web_servers
   gather_facts: no
   tasks:
-  - name: Shut down a machine with shutdown command in unusual place
-    tags: centos
-    ntpdate ntp.nict.jp
+  
+  - name: install apache and php (CentOS)
+    tags: apache,httpd,centos
