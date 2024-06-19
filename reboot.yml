@@ -3,10 +3,7 @@
   gather_facts: no
   tasks:
   
-    - name: NTP
+    - name: POWEROFF
       command: /sbin/shutdown -h now
-
-#    - name: shutdown
-#      command: /sbin/shutdown -h now
-#     sudo: yes
+      sudo: yes
 
