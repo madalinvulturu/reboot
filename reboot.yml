@@ -3,7 +3,7 @@
   gather_facts: no
   tasks:
   
-    - name: NTP
+    - name: POW
       command: /sbin/shutdown -h now
 #      sudo: yes
 
