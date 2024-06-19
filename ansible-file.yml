@@ -1,0 +1,13 @@
+- hosts: web_servers
+  become: true
+  tasks:
+  
+    - name: Reboot all Routing Engines on the Junos device
+      juniper.device.system:
+        action: "reboot"
+        in_min: 1
+        all_re: True
+      register: result
+      notify:
+        - pause_for_reboot
+        - wait_reboot
